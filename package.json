@@ -1,0 +1,22 @@
+{
+  "name": "durable-scheduler",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "migration:generate": "drizzle-kit generate --dialect=sqlite --driver=durable-sqlite --schema=./src/db.ts --out=./src/migrations"
+  },
+  "author": "Elliot Hesp <elliot@elliothesp.com>",
+  "license": "MIT",
+  "description": "A durable object for scheduling tasks",
+  "dependencies": {
+    "cron-parser": "^5.1.1",
+    "drizzle-orm": "^0.43.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250508.0",
+    "drizzle-kit": "^0.31.1",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.14.4"
+  }
+}
