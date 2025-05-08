@@ -9,14 +9,14 @@ Heavily inspired by [partywhen](https://github.com/cloudflare/partykit/tree/main
 Install the package:
 
 ```
-npm i --save durable-scheduler
+npm i --save cf-durable-scheduler
 ```
 
 Next, create your own class which extends the `DurableScheduler`:
 
 ```ts
 // index.ts
-import { DurableScheduler } from 'durable-scheduler';
+import { DurableScheduler } from 'cf-durable-scheduler';
 
 export class MyScheduler extends DurableScheduler<Env> {
   async onScheduledTask(task: Task): Promise<void> {
